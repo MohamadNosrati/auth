@@ -14,18 +14,18 @@ export default function Home() {
   const handleSubmit = async (
     e: SyntheticEvent<HTMLFormElement, SubmitEvent>
   ) => {
-    e.preventDefault();
-    const res = await axios.post(`api/auth/login`, JSON.stringify(data), {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (res.data.status === 200) {
-      cookie.set("token", res.data.user.id, { path: "/" });
-      router.push("/dashboard");
-    } else {
-      alert(false);
-    }
+    // e.preventDefault();
+    // const res = await axios.post(`api/auth/login`, JSON.stringify(data), {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    // if (res.data.status === 200) {
+    //   cookie.set("token", res.data.user.id, { path: "/" });
+    //   router.push("/dashboard");
+    // } else {
+    //   alert(false);
+    // }
   };
 
   return (
